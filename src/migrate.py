@@ -2,7 +2,10 @@ import importlib
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
 from pymongo import MongoClient
+
+load_dotenv()
 
 _CLIENT = MongoClient(os.environ["MONGO_URL"])
 _MIGRATIONS_COLLECTION = "_migrations"

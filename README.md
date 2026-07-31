@@ -11,10 +11,10 @@ Migration job that applies `pymongo` schema/index migrations to the platform's M
 
 ### Local development
 
-Requires `pyenv`, with the version in `.python-version` installed.
+Requires `pyenv` with the `pyenv-virtualenv` plugin, and Python 3.12 installed (`pyenv install 3.12.10`).
 
 ```bash
-pyenv virtualenv $(cat .python-version) ai-system-database-migrate
+pyenv virtualenv 3.12.10 ai-system-database-migrate
 pyenv local ai-system-database-migrate
 cp .env.example .env
 pip install -r requirements.txt
